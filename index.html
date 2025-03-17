@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Delights - Restaurante Gourmet en Bogotá">
+    <link rel="shortcut icon" href="./img/Icono.ico" />
+    <title>My Delights - Restaurante Gourmet en Bogotá</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/cart.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navegación lateral -->
+    <nav class="nav-menu">
+        <ul>
+            <li class="nav-item"><a href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a href="#menu-carta">Menú a la Carta</a></li>
+            <li class="nav-item"><a href="#menu-corriente">Comida Corriente</a></li>
+            <li class="nav-item"><a href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a href="#location">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart Modal -->
+    <!-- Add this right after your nav-menu -->
+    <div class="modal-overlay"></div>
+    <div class="cart-modal">
+        <span class="close-modal">&times;</span>
+        <h2>Tu Carrito de Compras</h2>
+        <div class="cart-content"></div>
+        <div class="cart-total">
+            <strong>Total:</strong>
+            <span class="total-amount">$0</span>
+        </div>
+        <button class="checkout-btn">Proceder al Pago</button>
+    </div>
+
+    <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </div>
+    
+    <!-- Contenido principal -->
+    <main>
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <div class="nav-left">
+                    <button class="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="nav-cen">
+                    <div class="nav-header">
+                    <img src="./img/Icono.jpg" alt="My Delights Logo" class="nav-logo">
+                    <h1>My Delights</h1>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="social-btns">
+                        <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <a href="#pedidos" class="order-btn">Ordenar Ahora</a>
+                </div>
+            </div>
+        </header>
+
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <h1 class="hero-title">Bienvenidos a My Delights</h1>
+            <p class="hero-subtitle">Sabor, calidad y atención personalizada en el norte de Bogotá</p>
+            <div class="hero-buttons">
+                <a href="#menu-carta" class="btn btn-primary">Ver Menú</a>
+                <a href="#pedidos" class="btn btn-secondary">Ordenar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú a la Carta Section -->
+    <section class="menu-section" id="menu-carta">
+        <div class="container">
+            <h2 class="section-title">Menú a la Carta</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-img">
+                        <img src="./img/Menu 1.jpg" alt="Filete de Res a la Parrilla">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Filete de Res a la Parrilla</h3>
+                        <p class="menu-description">Filete jugoso acompañado de papas asadas y ensalada fresca.</p>
+                        <p class="menu-ingredients"><strong>Ingredientes:</strong> Res de alta calidad, papas, vegetales mixtos, salsa chimichurri.</p>
+                        <div class="menu-price-action">
+                            <span class="menu-price">$35.000</span>
+                            <button class="add-to-cart" data-id="1" data-name="Filete de Res a la Parrilla" data-price="35000">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-img">
+                        <img src="./img/Menu 2.jpg" alt="Salmón a la Plancha">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Salmón a la Plancha</h3>
+                        <p class="menu-description">Salmón fresco cocido a la perfección, servido con vegetales salteados.</p>
+                        <p class="menu-ingredients"><strong>Ingredientes:</strong> Salmón, limón, aceite de oliva, vegetales de temporada.</p>
+                        <div class="menu-price-action">
+                            <span class="menu-price">$38.000</span>
+                            <button class="add-to-cart" data-id="2" data-name="Salmón a la Plancha" data-price="38000">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-img">
+                        <img src="./img/Menu 3.jpg" alt="Risotto de Champiñones">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Risotto de Champiñones</h3>
+                        <p class="menu-description">Cremoso arroz arborio con champiñones variados y queso parmesano.</p>
+                        <p class="menu-ingredients"><strong>Ingredientes:</strong> Arroz arborio, champiñones, queso parmesano, caldo de verduras.</p>
+                        <div class="menu-price-action">
+                            <span class="menu-price">$30.000</span>
+                            <button class="add-to-cart" data-id="3" data-name="Risotto de Champiñones" data-price="30000">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-img">
+                        <img src="./img/Menu 4.jpg" alt="Pasta al Pesto con Pollo">
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-title">Pasta al Pesto con Pollo</h3>
+                        <p class="menu-description">Pasta al dente con salsa al pesto y trozos de pollo a la plancha.</p>
+                        <p class="menu-ingredients"><strong>Ingredientes:</strong> Pasta, albahaca, piñones, queso, pollo.</p>
+                        <div class="menu-price-action">
+                            <span class="menu-price">$28.000</span>
+                            <button class="add-to-cart" data-id="4" data-name="Pasta al Pesto con Pollo" data-price="28000">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="menu-item">
+                <div class="menu-img">
+                    <img src="./img/Paella.jpg" alt="Paella de Mariscos">
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">Paella de Mariscos</h3>
+                    <p class="menu-description">Auténtica paella española con una selección de mariscos frescos.</p>
+                    <p class="menu-ingredients"><strong>Ingredientes:</strong> Arroz, camarones, mejillones, calamares, azafrán, pimientos.</p>
+                    <div class="menu-price-action">
+                        <span class="menu-price">$42.000</span>
+                        <button class="add-to-cart" data-id="5" data-name="Paella de Mariscos" data-price="42000">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-img">
+                    <img src="./img/Lomo res.jpg" alt="Lomo de Res en Salsa de Vino">
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">Lomo de Res en Salsa de Vino</h3>
+                    <p class="menu-description">Tierno lomo de res bañado en una reducción de vino tinto.</p>
+                    <p class="menu-ingredients"><strong>Ingredientes:</strong> Lomo de res, vino tinto, champiñones, tomillo, puré de papa.</p>
+                    <div class="menu-price-action">
+                        <span class="menu-price">$39.000</span>
+                        <button class="add-to-cart" data-id="6" data-name="Lomo de Res en Salsa de Vino" data-price="39000">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-img">
+                    <img src="./img/Corvina.jpg" alt="Corvina a la Mediterránea">
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">Corvina a la Mediterránea</h3>
+                    <p class="menu-description">Filete de corvina preparado con hierbas mediterráneas y limón.</p>
+                    <p class="menu-ingredients"><strong>Ingredientes:</strong> Corvina, aceite de oliva, hierbas, alcaparras, tomates cherry.</p>
+                    <div class="menu-price-action">
+                        <span class="menu-price">$36.000</span>
+                        <button class="add-to-cart" data-id="7" data-name="Corvina a la Mediterránea" data-price="36000">Agregar</button>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="menu-item">
+                <div class="menu-img">
+                    <img src="./img/Lasagna.jpg" alt="Lasaña de Carne">
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">Lasaña de Carne</h3>
+                    <p class="menu-description">Deliciosa lasaña casera con capas de pasta, carne y queso gratinado.</p>
+                    <p class="menu-ingredients"><strong>Ingredientes:</strong> Pasta, carne molida, salsa bechamel, queso mozzarella, parmesano, salsa de tomate.</p>
+                    <div class="menu-price-action">
+                        <span class="menu-price">$32.000</span>
+                        <button class="add-to-cart" data-id="8" data-name="Lasaña de Carne" data-price="32000">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-img">
+                    <img src="./img/Pechuga.jpg" alt="Pechuga a la Parmesana">
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">Pechuga a la Parmesana</h3>
+                    <p class="menu-description">Pechuga de pollo empanizada cubierta con salsa napolitana y queso gratinado.</p>
+                    <p class="menu-ingredients"><strong>Ingredientes:</strong> Pechuga de pollo, pan rallado, queso mozzarella, salsa napolitana, hierbas italianas.</p>
+                    <div class="menu-price-action">
+                        <span class="menu-price">$34.000</span>
+                        <button class="add-to-cart" data-id="9" data-name="Pechuga a la Parmesana" data-price="34000">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comida Corriente Section -->
+    <section class="menu-section" id="menu-corriente">
+        <div class="container">
+            <h2 class="section-title">Comida Corriente</h2>
+            
+            <!-- Sopas -->
+            <div class="menu-category">
+                <h3 class="category-title">SOPAS</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Comida 1.jpg" alt="Ajiaco Santafereño">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Ajiaco Santafereño</h3>
+                            <p class="menu-description">Tradicional sopa colombiana con pollo, tres tipos de papa, mazorca y guasca.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Pollo, papas (criolla, sabanera y pastusa), mazorca, guasca, crema y alcaparras.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$25.000</span>
+                                <button class="add-to-cart" data-id="10" data-name="Ajiaco Santafereño" data-price="25000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Comida 2.jpg" alt="Sopa de Verduras">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Sopa de Verduras</h3>
+                            <p class="menu-description">Sopa ligera y reconfortante con una mezcla de vegetales frescos.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Zanahoria, papa, calabacín, apio, cebolla y hierbas.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$18.000</span>
+                                <button class="add-to-cart" data-id="11" data-name="Sopa de Verduras" data-price="18000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Sopa pescado.jpg" alt="Sopa de Pescado">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Sopa de Pescado</h3>
+                            <p class="menu-description">Platillo que combina el sabor fresco del pescado con una mezcla de vegetales y especias.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong>Pescado blanco, zanahoria, cebolla, puerro, ajo, tomate, perejil y laurel</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$26.000</span>
+                                <button class="add-to-cart" data-id="12" data-name="Sopa de Pescado" data-price="26000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Sancocho.jpg" alt="Sancocho">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Sancocho</h3>
+                            <p class="menu-description">Tradicional sopa colombiana con una mezcla de carnes y tubérculos.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Pollo, plátano, yuca, papa, mazorca, cilantro, especias.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$24.000</span>
+                                <button class="add-to-cart" data-id="13" data-name="Sancocho" data-price="24000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Crema-champinones.jpg" alt="Crema de Champiñones">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Crema de Champiñones</h3>
+                            <p class="menu-description">Suave y cremosa sopa con champiñones frescos y un toque de vino blanco.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Champiñones, crema de leche, cebolla, ajo, vino blanco, perejil.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$22.000</span>
+                                <button class="add-to-cart" data-id="14" data-name="Crema de Champiñones" data-price="22000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Lentejas.jpg" alt="Sopa de Lentejas">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Sopa de Lentejas</h3>
+                            <p class="menu-description">Nutritiva sopa de lentejas con verduras y un toque de chorizo español.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Lentejas, zanahoria, papa, chorizo, cebolla, ajo, tomate.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$20.000</span>
+                                <button class="add-to-cart" data-id="15" data-name="Sopa de Lentejas" data-price="20000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">   
+            <!-- Principios (Entradas) -->
+            <div class="menu-category">
+                <h3 class="category-title">PRINCIPIOS (ENTRADAS)</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Comida 3.jpg" alt="Empanadas de Carne">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Empanadas de Carne</h3>
+                            <p class="menu-description">Crujientes empanadas rellenas de carne sazonada y verduras.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Masa de maíz, carne, papa, cebolla, comino.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$15.000</span>
+                                <button class="add-to-cart" data-id="16" data-name="Empanadas de Carne" data-price="15000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Comida 4.jpg" alt="Ensalada Fresca de la Casa">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Ensalada Fresca de la Casa</h3>
+                            <p class="menu-description">Ensalada mixta con ingredientes de temporada y aderezo especial.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Lechuga, tomate, pepino, zanahoria, aderezo casero.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$16.000</span>
+                                <button class="add-to-cart" data-id="17" data-name="Ensalada Fresca de la Casa" data-price="16000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Canapes.jpg" alt="Canape">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Canape</h3>
+                            <p class="menu-description">Es un aperitivo pequeño y elegante que se sirve sobre pan o galletas saladas</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Queso crema, jamón o salmón ahumado, pepino, tomate o hierbas frescas</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$16.000</span>
+                                <button class="add-to-cart" data-id="18" data-name="Canape" data-price="16000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Chorizo.jpg" alt="Chorizo Español a la Parrilla">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Chorizo Español a la Parrilla</h3>
+                            <p class="menu-description">Auténtico chorizo español asado, servido con pan rústico.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Chorizo español, pan rústico, chimichurri, aceite de oliva.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$18.000</span>
+                                <button class="add-to-cart" data-id="19" data-name="Chorizo Español a la Parrilla" data-price="18000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Ceviche.jpg" alt="Ceviche de Camarón">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Ceviche de Camarón</h3>
+                            <p class="menu-description">Frescos camarones marinados en limón con cebolla morada y cilantro.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Camarones, limón, cebolla morada, cilantro, ají, maíz tostado.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$22.000</span>
+                                <button class="add-to-cart" data-id="20" data-name="Ceviche de Camarón" data-price="22000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Carpaccio.jpg" alt="Carpaccio de Res">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Carpaccio de Res</h3>
+                            <p class="menu-description">Finas láminas de res con rúgula, parmesano y aceite de oliva.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Lomo de res, rúgula, queso parmesano, alcaparras, aceite de oliva.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$24.000</span>
+                                <button class="add-to-cart" data-id="21" data-name="Carpaccio de Res" data-price="24000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div> 
+        <div class="container">    
+            <!-- Platos Fuertes -->
+            <div class="menu-category">
+                <h3 class="category-title">PLATOS FUERTES</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Plato 1.jpg" alt="Carne Asada con Papas y Ensalada">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Carne Asada con Papas y Ensalada</h3>
+                            <p class="menu-description">Corte de carne asada a la perfección, acompañado de papas y ensalada.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Carne de res, papas, vegetales frescos, salsa de la casa.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$28.000</span>
+                                <button class="add-to-cart" data-id="22" data-name="Carne Asada con Papas y Ensalada" data-price="28000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Plat 2.jpg" alt="Pollo al Horno con Arroz y Vegetales">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Pollo al Horno con Arroz y Vegetales</h3>
+                            <p class="menu-description">Jugoso pollo al horno servido con arroz blanco y vegetales al vapor.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Pollo, arroz, vegetales variados, hierbas aromáticas.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$26.000</span>
+                                <button class="add-to-cart" data-id="23" data-name="Pollo al Horno con Arroz y Vegetales" data-price="26000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Plato 3.jpg" alt="Chuleta de Cerdo con Puré de Papas">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Chuleta de Cerdo con Puré de Papas</h3>
+                            <p class="menu-description">Tierno corte de cerdo acompañado de un cremoso puré de papas.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Chuleta de cerdo, papas, mantequilla, especias.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$27.000</span>
+                                <button class="add-to-cart" data-id="24" data-name="Chuleta de Cerdo con Puré de Papas" data-price="27000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Pescado Frito.jpg" alt="Pescado Frito con Patacones">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Pescado Frito con Patacones</h3>
+                            <p class="menu-description">Pescado fresco frito acompañado de patacones crujientes y arroz con coco.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Mojarra, plátano verde, arroz, coco, limón, ensalada.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$29.000</span>
+                                <button class="add-to-cart" data-id="25" data-name="Pescado Frito con Patacones" data-price="29000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Costillas.jpg" alt="Costillas BBQ">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Costillas BBQ</h3>
+                            <p class="menu-description">Tiernas costillas de cerdo en salsa BBQ casera con papas rústicas.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Costillas de cerdo, salsa BBQ, papas, ensalada coleslaw.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$32.000</span>
+                                <button class="add-to-cart" data-id="26" data-name="Costillas BBQ" data-price="32000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-img">
+                            <img src="./img/Lomo Saltado.jpg" alt="Lomo Saltado">
+                        </div>
+                        <div class="menu-content">
+                            <h3 class="menu-title">Lomo Saltado</h3>
+                            <p class="menu-description">Plato peruano-oriental con tiras de lomo fino salteadas con verduras.</p>
+                            <p class="menu-ingredients"><strong>Ingredientes:</strong> Lomo fino, cebolla, tomate, papas fritas, arroz, sillao.</p>
+                            <div class="menu-price-action">
+                                <span class="menu-price">$31.000</span>
+                                <button class="add-to-cart" data-id="27" data-name="Lomo Saltado" data-price="31000">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="services-section" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-img" style="background-image: url(./img/Banquete.jpg);"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Banquetes</h3>
+                        <p class="card-text">Menús personalizados para celebraciones, reuniones de trabajo y eventos especiales.</p>
+                        <a href="#" class="btn btn-primary">Cotizar</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(./img/Buffet.jpg);"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bufetes</h3>
+                        <p class="card-text">Estaciones de comida estilo buffet con variedad de opciones para todos los gustos.</p>
+                        <a href="#" class="btn btn-primary">Cotizar</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url(./img/Eventos\ especiales.jpg);"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Eventos Especiales</h3>
+                        <p class="card-text">Paquetes especiales para cumpleaños, aniversarios, reuniones empresariales y más.</p>
+                        <a href="#" class="btn btn-primary">Cotizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Location -->
+    <section class="location" id="location">
+        <div class="container location-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <strong>Dirección:</strong>
+                            <p>Calle 123 #45-67, Norte de Bogotá</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>Email:</strong>
+                            <p>info@mydelights.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <strong>Teléfono:</strong>
+                            <p>+57 123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h4>Síguenos en redes sociales</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <div class="location-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.056326690146!2d-74.03690482617228!3d4.760215995215019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f854e9df584f7%3A0x4601f7a789602901!2sNorte%20de%20bogota!5e0!3m2!1ses!2sco!4v1741729248891!5m2!1ses!2sco" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pedidos Section -->
+    <section id="pedidos" class="order-section">
+        <div class="container">
+            <div class="order-container">
+                <div class="order-form">
+                    <h2>Haz tu Pedido</h2>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="customerName">Nombre Completo *</label>
+                            <input type="text" id="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Correo Electrónico *</label>
+                            <input type="email" id="customerEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Teléfono *</label>
+                            <input type="tel" id="customerPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerAddress">Dirección de Entrega *</label>
+                            <textarea id="customerAddress" required></textarea>
+                        </div>
+                        <div class="order-summary">
+                            <h3>Resumen de tu Pedido</h3>
+                            <div id="cartItems"></div>
+                            <div class="order-totals">
+                                <div class="subtotal">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotal">$0</span>
+                                </div>
+                                <div class="delivery-fee">
+                                    <span>Domicilio:</span>
+                                    <span>$5.000</span>
+                                </div>
+                                <div class="total">
+                                    <span>Total:</span>
+                                    <span id="total">$0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-order">Confirmar Pedido</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">My Delights</h3>
+                <p>Disfruta de nuestra deliciosa comida preparada con los mejores ingredientes y con el sabor único que nos caracteriza.</p>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Explora</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu-carta">Menú a la Carta</a></li>
+                    <li><a href="#menu-corriente">Comida Corriente</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#location">Ubicación</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Visítanos</h3>
+                <p>My Delights Bogotá</p>
+                <p>Calle 123 #45-67</p>
+                <p>Norte de Bogotá</p>
+                <div class="footer-contact">
+                    <p>Nuevo Negocio:</p>
+                    <p>info@mydelights.com</p>
+                    <p>+57 123 456 7890</p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Síguenos</h3>
+                <ul class="footer-social">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Términos</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                </ul>
+                <h3 class="footer-title">Creador de la pagina</h3>
+                <ul class="footer-links">
+                    <p>Oscar Silva</p>
+                    <p>Tel: 3129876543</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        }
+        
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+    </script>
+</body>
+</html>
+
